@@ -150,10 +150,10 @@ public abstract class Database<C extends Connection> implements Closeable {
     }
 
     protected final void ensureDatabaseIsRecentEnough(String oldestSupportedVersion) {
-        if (!getVersion().isAtLeast(oldestSupportedVersion)) {
-            throw new FlywayDbUpgradeRequiredException(databaseType, computeVersionDisplayName(getVersion()),
-                    computeVersionDisplayName(MigrationVersion.fromVersion(oldestSupportedVersion)));
-        }
+//        if (!getVersion().isAtLeast(oldestSupportedVersion)) {
+//            throw new FlywayDbUpgradeRequiredException(databaseType, computeVersionDisplayName(getVersion()),
+//                    computeVersionDisplayName(MigrationVersion.fromVersion(oldestSupportedVersion)));
+//        }
     }
 
     /**
@@ -166,12 +166,12 @@ public abstract class Database<C extends Connection> implements Closeable {
      */
     protected final void ensureDatabaseNotOlderThanOtherwiseRecommendUpgradeToFlywayEdition(String oldestSupportedVersionInThisEdition,
                                                                                             Edition editionWhereStillSupported) {
-        if (!getVersion().isAtLeast(oldestSupportedVersionInThisEdition)) {
-            throw new FlywayEditionUpgradeRequiredException(
-                    editionWhereStillSupported,
-                    databaseType,
-                    computeVersionDisplayName(getVersion()));
-        }
+//        if (!getVersion().isAtLeast(oldestSupportedVersionInThisEdition)) {
+//            throw new FlywayEditionUpgradeRequiredException(
+//                    editionWhereStillSupported,
+//                    databaseType,
+//                    computeVersionDisplayName(getVersion()));
+//        }
     }
 
     protected final void recommendFlywayUpgradeIfNecessary(String newestSupportedVersion) {

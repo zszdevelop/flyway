@@ -56,6 +56,7 @@ public class DriverDataSource implements DataSource {
         MYSQL("jdbc:mysql:", "com.mysql.cj.jdbc.Driver"),
         MYSQL_GOOGLE("jdbc:google:", "com.mysql.jdbc.GoogleDriver"),
         ORACLE("jdbc:oracle", "oracle.jdbc.OracleDriver"),
+        DM("jdbc:dm", "dm.jdbc.driver.DmDriver"),
         POSTGRESQL("jdbc:postgresql:", "org.postgresql.Driver"),
         REDSHIFT("jdbc:redshift:", "com.amazon.redshift.jdbc42.Driver"),
         SAPHANA("jdbc:sap:", "com.sap.db.jdbc.Driver"),
